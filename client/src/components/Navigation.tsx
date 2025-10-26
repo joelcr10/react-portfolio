@@ -63,6 +63,13 @@ export default function Navigation() {
           >
             Experience
           </button>
+          <button
+            onClick={() => scrollToSection("education")}
+            className="text-sm font-medium hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-colors"
+            data-testid="link-education"
+          >
+            Education
+          </button>
           <ThemeToggle />
         </div>
       </nav>
