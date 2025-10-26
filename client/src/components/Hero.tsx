@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Download, Code2, Sparkles, Rocket, Zap } from "lucide-react";
 import profileImage from "@assets/generated_images/Professional_developer_headshot_portrait_e31d76e2.png";
+import heroBg from "@assets/generated_images/Abstract_tech_background_pattern_770a0576.png";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -27,9 +28,16 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
     >
-      {/* Enhanced gradient background with multiple layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-primary/5 via-transparent to-transparent pointer-events-none" />
+      {/* Background image with dark overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroBg} 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+      </div>
       
       {/* Animated floating elements */}
       <div 
@@ -55,7 +63,7 @@ export default function Hero() {
       
       {/* Animated grid pattern overlay */}
       <div 
-        className="absolute inset-0 opacity-[0.03]" 
+        className="absolute inset-0 opacity-[0.02]" 
         style={{
           backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
           backgroundSize: '40px 40px',
@@ -64,13 +72,13 @@ export default function Hero() {
       />
 
       {/* Floating icons */}
-      <div className="absolute top-32 left-20 opacity-20" style={{ animation: 'floatSlow 6s ease-in-out infinite' }}>
+      <div className="absolute top-32 left-20 opacity-10" style={{ animation: 'floatSlow 6s ease-in-out infinite' }}>
         <Code2 className="h-12 w-12 text-primary" />
       </div>
-      <div className="absolute bottom-40 right-32 opacity-20" style={{ animation: 'floatSlow 7s ease-in-out infinite', animationDelay: '1s' }}>
+      <div className="absolute bottom-40 right-32 opacity-10" style={{ animation: 'floatSlow 7s ease-in-out infinite', animationDelay: '1s' }}>
         <Rocket className="h-10 w-10 text-accent" />
       </div>
-      <div className="absolute top-1/3 right-20 opacity-20" style={{ animation: 'floatSlow 8s ease-in-out infinite', animationDelay: '2s' }}>
+      <div className="absolute top-1/3 right-20 opacity-10" style={{ animation: 'floatSlow 8s ease-in-out infinite', animationDelay: '2s' }}>
         <Zap className="h-8 w-8 text-primary" />
       </div>
       

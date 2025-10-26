@@ -2,16 +2,7 @@ import { useEffect, useRef } from "react";
 
 export default function CursorTrail() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<Array<{
-    x: number;
-    y: number;
-    size: number;
-    speedX: number;
-    speedY: number;
-    life: number;
-    maxLife: number;
-  }>>([]);
-  const mouseRef = useRef({ x: 0, y: 0 });
+  const mouseRef = useRef({ x: 0, y: 0, targetX: 0, targetY: 0 });
   const animationRef = useRef<number>();
 
   useEffect(() => {
@@ -30,48 +21,41 @@ export default function CursorTrail() {
     window.addEventListener("resize", resizeCanvas);
 
     const handleMouseMove = (e: MouseEvent) => {
-      mouseRef.current = { x: e.clientX, y: e.clientY };
-      
-      // Create new particles
-      for (let i = 0; i < 2; i++) {
-        particlesRef.current.push({
-          x: e.clientX + (Math.random() - 0.5) * 10,
-          y: e.clientY + (Math.random() - 0.5) * 10,
-          size: Math.random() * 3 + 1,
-          speedX: (Math.random() - 0.5) * 2,
-          speedY: (Math.random() - 0.5) * 2,
-          life: 0,
-          maxLife: 60
-        });
-      }
+      mouseRef.current.targetX = e.clientX;
+      mouseRef.current.targetY = e.clientY;
     };
 
     window.addEventListener("mousemove", handleMouseMove);
 
     const animate = () => {
+      // Smooth following effect
+      mouseRef.current.x += (mouseRef.current.targetX - mouseRef.current.x) * 0.15;
+      mouseRef.current.y += (mouseRef.current.targetY - mouseRef.current.y) * 0.15;
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Update and draw particles
-      particlesRef.current = particlesRef.current.filter(particle => {
-        particle.life++;
-        particle.x += particle.speedX;
-        particle.y += particle.speedY;
-        particle.speedY += 0.1; // gravity effect
+      // Get primary color from CSS variable
+      const primaryColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--primary')
+        .trim();
 
-        const alpha = 1 - (particle.life / particle.maxLife);
-        
-        // Get primary color from CSS variable
-        const primaryColor = getComputedStyle(document.documentElement)
-          .getPropertyValue('--primary')
-          .trim();
-        
-        ctx.fillStyle = `hsl(${primaryColor} / ${alpha * 0.6})`;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+      // Draw subtle glow effect
+      const gradient = ctx.createRadialGradient(
+        mouseRef.current.x,
+        mouseRef.current.y,
+        0,
+        mouseRef.current.x,
+        mouseRef.current.y,
+        150
+      );
 
-        return particle.life < particle.maxLife;
-      });
+      gradient.addColorStop(0, `hsl(${primaryColor} / 0.15)`);
+      gradient.addColorStop(0.3, `hsl(${primaryColor} / 0.08)`);
+      gradient.addColorStop(0.6, `hsl(${primaryColor} / 0.03)`);
+      gradient.addColorStop(1, `hsl(${primaryColor} / 0)`);
+
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -90,8 +74,7 @@ export default function CursorTrail() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-50"
-      style={{ mixBlendMode: 'screen' }}
+      className="fixed inset-0 pointer-events-none z-50 opacity-60"
     />
   );
 }
