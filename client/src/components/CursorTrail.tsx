@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 export default function CursorTrail() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mouseRef = useRef({ x: 0, y: 0, targetX: 0, targetY: 0 });
+  const mouseRef = useRef({ x: 0, y: 0 });
   const animationRef = useRef<number>();
 
   useEffect(() => {
@@ -21,17 +21,13 @@ export default function CursorTrail() {
     window.addEventListener("resize", resizeCanvas);
 
     const handleMouseMove = (e: MouseEvent) => {
-      mouseRef.current.targetX = e.clientX;
-      mouseRef.current.targetY = e.clientY;
+      mouseRef.current.x = e.clientX;
+      mouseRef.current.y = e.clientY;
     };
 
     window.addEventListener("mousemove", handleMouseMove);
 
     const animate = () => {
-      // Smooth following effect
-      mouseRef.current.x += (mouseRef.current.targetX - mouseRef.current.x) * 0.15;
-      mouseRef.current.y += (mouseRef.current.targetY - mouseRef.current.y) * 0.15;
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Get primary color from CSS variable
@@ -39,19 +35,20 @@ export default function CursorTrail() {
         .getPropertyValue('--primary')
         .trim();
 
-      // Draw subtle glow effect
+      // Draw more noticeable glow effect directly under cursor
       const gradient = ctx.createRadialGradient(
         mouseRef.current.x,
         mouseRef.current.y,
         0,
         mouseRef.current.x,
         mouseRef.current.y,
-        150
+        200
       );
 
-      gradient.addColorStop(0, `hsl(${primaryColor} / 0.15)`);
-      gradient.addColorStop(0.3, `hsl(${primaryColor} / 0.08)`);
-      gradient.addColorStop(0.6, `hsl(${primaryColor} / 0.03)`);
+      gradient.addColorStop(0, `hsl(${primaryColor} / 0.4)`);
+      gradient.addColorStop(0.2, `hsl(${primaryColor} / 0.25)`);
+      gradient.addColorStop(0.5, `hsl(${primaryColor} / 0.12)`);
+      gradient.addColorStop(0.8, `hsl(${primaryColor} / 0.05)`);
       gradient.addColorStop(1, `hsl(${primaryColor} / 0)`);
 
       ctx.fillStyle = gradient;
@@ -74,7 +71,7 @@ export default function CursorTrail() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-50 opacity-60"
+      className="fixed inset-0 pointer-events-none z-50"
     />
   );
 }

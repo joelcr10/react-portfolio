@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Download, Code2, Sparkles, Rocket, Zap } from "lucide-react";
 import profileImage from "@assets/generated_images/Professional_developer_headshot_portrait_e31d76e2.png";
-import heroBg from "@assets/generated_images/Abstract_tech_background_pattern_770a0576.png";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -28,16 +27,9 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
     >
-      {/* Background image with dark overlay */}
-      <div className="absolute inset-0">
-        <img 
-          src={heroBg} 
-          alt="" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95" />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-      </div>
+      {/* Enhanced gradient background with multiple layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-primary/5 via-transparent to-transparent pointer-events-none" />
       
       {/* Animated floating elements */}
       <div 
