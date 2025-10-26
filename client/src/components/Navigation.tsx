@@ -43,6 +43,13 @@ export default function Navigation() {
             About
           </button>
           <button
+            onClick={() => scrollToSection("skills")}
+            className="text-sm font-medium hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-colors"
+            data-testid="link-skills"
+          >
+            Skills
+          </button>
+          <button
             onClick={() => scrollToSection("projects")}
             className="text-sm font-medium hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-colors"
             data-testid="link-projects"
