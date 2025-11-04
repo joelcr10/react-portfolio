@@ -17,17 +17,18 @@ type EducationItem = {
 export default function Education() {
   const education: EducationItem[] = [
     {
-      institution: "University of Technology",
-      degree: "Bachelor of Science",
-      field: "Computer Science",
-      location: "San Francisco, CA",
-      startDate: "2015",
-      endDate: "2019",
-      gpa: "3.8/4.0",
+      institution: "APJ Abdul Kalam Technological University",
+      degree: "B. Tech",
+      field: "Computer Science & Engineering",
+      location: "Kottayam, KL",
+      startDate: "2019",
+      endDate: "2023",
+      gpa: "8.21",
       achievements: [
-        "Dean's List all semesters",
-        "Outstanding Senior Project Award",
-        "President of Computer Science Club"
+        "Consistently achieved academic excellence, earning Dean’s List distinction for six semesters.",
+        "Elected to the Student Council for demonstrating leadership and initiative, facilitating communication between students and management, and coordinating key campus events.",
+        "As Webmaster of the ACM Club, built and maintained the official website, designed event posters, coordinated technical events, and helped expand the club’s membership to 400+ students.",
+        "Led a team of 6 as Team Head for a Web/App Development Exhibition, guiding school students through the fundamentals of website and app development."
       ],
       coursework: [
         "Data Structures",
@@ -35,21 +36,32 @@ export default function Education() {
         "Database Systems",
         "Web Development",
         "Cloud Computing",
-        "Machine Learning"
+        "Machine Learning",
+        "Internet of Things (IoT)",
+        "Artificial Inteligence",
+        "Computer Networks"
       ]
     },
     {
-      institution: "Lincoln High School",
+      institution: "St. Gregorios School",
       degree: "High School Diploma",
-      field: "Science & Mathematics",
-      location: "San Francisco, CA",
-      startDate: "2011",
-      endDate: "2015",
-      gpa: "3.9/4.0",
+      field: "CBSE",
+      location: "Dwarka, DL",
+      startDate: "2017",
+      endDate: "2019",
+      gpa: "89%",
       achievements: [
-        "Valedictorian",
-        "National Honor Society Member",
-        "Science Olympiad State Champion"
+        "Achieved victory at the zonal level in my debut football tournament, showcasing strong teamwork, strategy, and determination on the field..",
+        "Secured multiple medals in track and field events, demonstrating consistent athletic performance, discipline, and a passion for sports during my school years.",
+        "Received the ‘Star Child’ award for consecutive years in recognition of exemplary behavior, leadership qualities, and positive contribution to the school community."
+      ],
+      coursework: [
+        "Football",
+        "Track and Field",
+        "Science",
+        "Computer Science",
+        "Mathematics",
+        "English"
       ]
     }
   ];
@@ -117,7 +129,7 @@ export default function Education() {
                     </h4>
                     <ul className="space-y-1">
                       {item.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex gap-2 text-sm text-muted-foreground">
+                        <li key={idx} className="flex gap-3 pt-3 text-sm text-muted-foreground">
                           <span className="text-primary mt-1">•</span>
                           <span>{achievement}</span>
                         </li>

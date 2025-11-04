@@ -1,26 +1,27 @@
 import { Badge } from "@/components/ui/badge";
-import profileImage from "@assets/generated_images/Professional_developer_headshot_portrait_e31d76e2.png";
+import profileImage from "@assets/generated_images/aboutImage.png";
 
 export default function About() {
   const skills = [
-    "React", "TypeScript", "Node.js", "Python", "AWS",
-    "Docker", "PostgreSQL", "GraphQL", "TailwindCSS", "Next.js",
-    "Express", "MongoDB", "Redis", "Kubernetes", "CI/CD"
+    // "React", "TypeScript", "Node.js", "Python", "AWS",
+    // "Docker", "PostgreSQL", "GraphQL", "TailwindCSS", "Next.js",
+    // "Express", "MongoDB", "Redis", "Kubernetes", "CI/CD"
+    "Football", "Movies", "Track & Field", "Badminton", "Reading", "Bike Rides", "Drawing", "Gym" 
   ];
 
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="pt-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-semibold mb-16 text-center">
+        <h2 className="text-4xl md:text-5xl font-semibold mb- text-center">
           About Me
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center">
+          <div className="flex bg-red aspect-square object-cover">
             <img
               src={profileImage}
               alt="Profile"
-              className="rounded-md w-full max-w-md aspect-square object-cover"
+              // className="rounded-md w-full max-w-md aspect-square"
             />
           </div>
 
@@ -32,15 +33,12 @@ export default function About() {
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-              My expertise spans from frontend frameworks like React to backend
-              technologies and cloud infrastructure. I'm committed to writing clean,
-              maintainable code and continuously learning new technologies to stay
-              at the forefront of web development.
+              Beyond development, I take pride in mentoring junior developers and leading teams to deliver impactful internal tools still used across organizations. My approach blends strong technical expertise with practical problem-solving, ensuring that every project I contribute to is efficient, maintainable, and built to scale. I’m always eager to explore new technologies and continue evolving as a developer who bridges functionality and innovation.
             </p>
 
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-4">
-                Technical Skills
+                 Other Interest
               </h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (

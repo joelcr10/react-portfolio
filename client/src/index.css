@@ -325,4 +325,9 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+
+  #card-layout {
+    background-color: red;
+    justify-content: center;
+  }
 }

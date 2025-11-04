@@ -26,6 +26,7 @@ function App() {
         </ThemeProvider>
       </TooltipProvider>
     </QueryClientProvider>
+    // <h1>Welcome to portfolio</h1>
   );
 }
 

@@ -20,38 +20,26 @@ type ResearchPaper = {
 export default function Certifications() {
   const certifications: Certification[] = [
     {
-      title: "AWS Certified Solutions Architect - Professional",
-      issuer: "Amazon Web Services",
-      date: "2024",
-      credentialId: "ABC123XYZ"
-    },
-    {
-      title: "AWS Certified Developer - Associate",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "DEF456UVW"
-    },
-    {
       title: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      date: "2022",
+      date: "2025",
       credentialId: "GHI789RST"
+    },
+    {
+      title: "Complete Node.js course with Express, socket.io and MongoDB",
+      issuer: "Udemy",
+      date: "2022",
+      credentialId: "9978HJ-13CT"
     }
   ];
 
   const researchPapers: ResearchPaper[] = [
     {
-      title: "Optimizing Serverless Architectures for Cost-Effective Scalability",
-      publication: "IEEE Cloud Computing Conference",
-      year: "2024",
-      link: "#"
-    },
-    {
-      title: "Machine Learning Model Deployment in Production Environments",
-      publication: "Journal of Software Engineering",
+      title: "Fruit Freshness Detection using IoT and Deep Learning",
+      publication: "IEEE Xplore",
       year: "2023",
-      link: "#"
-    }
+      link: "https://ieeexplore.ieee.org/document/10244785"
+    },
   ];
 
   const handlePaperClick = (title: string) => {
@@ -59,7 +47,7 @@ export default function Certifications() {
   };
 
   return (
-    <section id="certifications" className="py-24 px-6">
+    <section id="certifications" className="py-24 px-6 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-semibold mb-16 text-center">
           Certifications & Research
@@ -69,7 +57,7 @@ export default function Certifications() {
           <div>
             <h3 className="text-2xl font-semibold mb-6 flex items-center gap-2">
               <Award className="h-6 w-6 text-primary" />
-              AWS Certifications
+              Certifications
             </h3>
             <div className="space-y-4">
               {certifications.map((cert) => (
@@ -112,7 +100,7 @@ export default function Certifications() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          onClick={() => handlePaperClick(paper.title)}
+                          onClick={() => window.open('https://ieeexplore.ieee.org/document/10244785')}
                           data-testid={`button-view-paper-${paper.title.toLowerCase().replace(/\s+/g, '-')}`}
                           className="gap-1"
                         >

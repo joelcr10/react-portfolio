@@ -15,14 +15,15 @@ export default function Skills() {
       icon: Layout,
       skills: [
         "React",
-        "Next.js",
+        "React Native",
+        // "Next.js",
         "TypeScript",
         "JavaScript",
         "HTML5",
         "CSS3",
-        "Tailwind CSS",
+        "Bootstrap",
         "Redux",
-        "Vue.js"
+        // "Vue.js"
       ]
     },
     {
@@ -32,11 +33,12 @@ export default function Skills() {
         "Node.js",
         "Express",
         "Python",
-        "Django",
-        "Flask",
+        "Typescript",
         "RESTful APIs",
-        "GraphQL",
-        "Microservices"
+         "JWT",
+        "Microservices",
+        "Modular-Monolithic",
+        "Swagger"
       ]
     },
     {
@@ -46,10 +48,11 @@ export default function Skills() {
         "PostgreSQL",
         "MongoDB",
         "MySQL",
+        "Firebase",
         "Redis",
-        "DynamoDB",
         "Prisma",
-        "Drizzle ORM"
+        // "Drizzle ORM",
+        "Sequelize",
       ]
     },
     {
@@ -58,27 +61,29 @@ export default function Skills() {
       skills: [
         "AWS",
         "Docker",
-        "Kubernetes",
+        // "Kubernetes",
         "CI/CD",
         "GitHub Actions",
-        "Terraform",
-        "Nginx",
+        // "Terraform",
+        "AWS S3",
+        "Cloudfront",
+        "ECS",
         "Linux"
       ]
     },
-    {
-      title: "Programming Languages",
-      icon: Code2,
-      skills: [
-        "JavaScript",
-        "TypeScript",
-        "Python",
-        "Java",
-        "Go",
-        "C++",
-        "SQL"
-      ]
-    },
+    // {
+    //   title: "Programming Languages",
+    //   icon: Code2,
+    //   skills: [
+    //     "JavaScript",
+    //     "TypeScript",
+    //     "Python",
+    //     "Java",
+    //     "Go",
+    //     "C++",
+    //     "SQL"
+    //   ]
+    // },
     {
       title: "Tools & Others",
       icon: Settings,
@@ -86,11 +91,14 @@ export default function Skills() {
         "Git",
         "VS Code",
         "Postman",
-        "Jest",
-        "Webpack",
-        "Vite",
+        // "Jest",
+        "Github",
+        "Photoshop",
         "Figma",
-        "Jira"
+        "Jira",
+        "Confluence",
+        "pgAdmin",
+        "MySQL Workbench"
       ]
     }
   ];
@@ -107,7 +115,7 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-stretch">
           {skillCategories.map((category) => {
             const IconComponent = category.icon;
             return (

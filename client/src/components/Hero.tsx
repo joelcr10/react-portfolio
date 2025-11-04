@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Download, Code2, Sparkles, Rocket, Zap } from "lucide-react";
-import profileImage from "@assets/generated_images/Professional_developer_headshot_portrait_e31d76e2.png";
+import profileImage from "@assets/generated_images/profile.jpg";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -81,10 +81,10 @@ export default function Hero() {
             className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl"
             style={{ animation: 'pulse 3s ease-in-out infinite' }}
           />
-          <Avatar className="w-40 h-40 mx-auto border-4 border-background shadow-xl relative hover:scale-105 transition-transform duration-300">
+          {/* <Avatar className="w-50 h-40 mx-auto border-4 border-background shadow-xl relative hover:scale-105 transition-transform duration-300">
             <AvatarImage src={profileImage} alt="Profile" />
             <AvatarFallback>JD</AvatarFallback>
-          </Avatar>
+          </Avatar> */}
           <div 
             className="absolute -top-2 -right-2 bg-primary text-primary-foreground rounded-full p-2"
             style={{ animation: 'bounce 2s ease-in-out infinite' }}
@@ -98,8 +98,8 @@ export default function Hero() {
           className="mb-4 flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground uppercase tracking-wider"
           style={{ animation: 'fadeInUp 0.6s ease-out 0.2s both' }}
         >
-          <Code2 className="h-4 w-4" />
-          <span>Welcome to my portfolio</span>
+          {/* <Code2 className="h-4 w-4" /> */}
+          {/* <span>Welcome to my portfolio</span> */}
         </div>
 
         {/* Main heading with enhanced typography and animation */}
@@ -108,7 +108,7 @@ export default function Hero() {
           style={{ animation: 'fadeInUp 0.6s ease-out 0.3s both' }}
         >
           <span className="inline-block bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-gradient" style={{ backgroundSize: '200% auto' }}>
-            John Doe
+            Joel C Raju
           </span>
         </h1>
 
@@ -116,7 +116,7 @@ export default function Hero() {
         <div className="mb-6" style={{ animation: 'fadeInUp 0.6s ease-out 0.4s both' }}>
           <p className="text-2xl md:text-3xl font-semibold mb-2">
             <span className="inline-block bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent animate-gradient" style={{ backgroundSize: '200% auto' }}>
-              Full Stack Developer & Cloud Architect
+              Software Engineer | Full Stack Developer
             </span>
           </p>
         </div>
@@ -126,9 +126,7 @@ export default function Hero() {
           className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed px-4"
           style={{ animation: 'fadeInUp 0.6s ease-out 0.5s both' }}
         >
-          Crafting elegant solutions through code. Specializing in scalable web applications,
-          cloud infrastructure, and modern development practices.
-          Let's build something amazing together.
+          I’m a developer who loves solving problems through code, from backend logic to frontend flow. With a knack for optimizing systems and building impactful tools, I aim to create products that truly help people.  
         </p>
 
         {/* CTA buttons with improved styling and animation */}
@@ -161,16 +159,16 @@ export default function Hero() {
           style={{ animation: 'fadeInUp 0.6s ease-out 0.7s both' }}
         >
           <div className="hover:scale-110 transition-transform duration-300">
-            <div className="text-3xl font-bold text-primary mb-1" style={{ animation: 'countUp 2s ease-out 0.8s both' }}>5+</div>
+            <div className="text-3xl font-bold text-primary mb-1" style={{ animation: 'countUp 2s ease-out 0.8s both' }}>2+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="hover:scale-110 transition-transform duration-300">
-            <div className="text-3xl font-bold text-primary mb-1" style={{ animation: 'countUp 2s ease-out 1s both' }}>50+</div>
-            <div className="text-sm text-muted-foreground">Projects Completed</div>
+            <div className="text-3xl font-bold text-primary mb-1" style={{ animation: 'countUp 2s ease-out 1.2s both' }}>1000+</div>
+            <div className="text-sm text-muted-foreground">Users Impacted</div>
           </div>
           <div className="hover:scale-110 transition-transform duration-300">
-            <div className="text-3xl font-bold text-primary mb-1" style={{ animation: 'countUp 2s ease-out 1.2s both' }}>3</div>
-            <div className="text-sm text-muted-foreground">AWS Certifications</div>
+            <div className="text-3xl font-bold text-primary mb-1" style={{ animation: 'countUp 2s ease-out 1s both' }}>9+</div>
+            <div className="text-sm text-muted-foreground">Projects Completed</div>
           </div>
         </div>
       </div>

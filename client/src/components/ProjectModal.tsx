@@ -13,6 +13,7 @@ type ProjectDetails = {
   title: string;
   description: string;
   image: string;
+  background: string;
   techStack: string[];
   longDescription: string;
   features: string[];
@@ -38,21 +39,21 @@ export default function ProjectModal({ project, open, onOpenChange }: ProjectMod
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto scrollbar-none">
         <DialogHeader>
           <DialogTitle className="text-3xl font-bold">{project.title}</DialogTitle>
-          <DialogDescription className="text-base">
+          <DialogDescription className="text-base whitespace-pre-line">
             {project.description}
           </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-6 mt-4">
           {/* Project Image */}
-          <div className="rounded-md overflow-hidden">
+          <div className={`rounded-md overflow-hidden ${project.background}`}>
             <img
               src={project.image}
               alt={project.title}
-              className="w-full aspect-video object-cover"
+              className="w-full aspect-video object-contain"
             />
           </div>
 
@@ -124,7 +125,7 @@ export default function ProjectModal({ project, open, onOpenChange }: ProjectMod
           <div className="flex flex-wrap gap-3 pt-4 border-t">
             {project.liveUrl && (
               <Button
-                onClick={() => handleLinkClick(project.liveUrl!, "live site")}
+                onClick={() => window.open(project.liveUrl!, "_blank")}
                 data-testid="button-view-live"
                 className="gap-2"
               >
@@ -135,7 +136,7 @@ export default function ProjectModal({ project, open, onOpenChange }: ProjectMod
             {project.githubUrl && (
               <Button
                 variant="outline"
-                onClick={() => handleLinkClick(project.githubUrl!, "GitHub")}
+                onClick={() => window.open(project.githubUrl!, "_blank")}
                 data-testid="button-view-github"
                 className="gap-2"
               >
