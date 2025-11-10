@@ -33,43 +33,48 @@ export default function Projects() {
   const projects: ProjectDetails[] = [
     {
       title: "PropTech + FinTech Web App",
-      description: "A Website developed for an Indian startup that teaches chess to 500+ children across 10+ countries.",
+      description: "Rentd is a property rental and fintech platform that allows users to find rental properties, Digital payments and wallet transfers.",
       image: propTechImg,
       background: 'bg-gradient-to-r from-[#9db9b9] via-white-400 to-green-200',
-      techStack: ["HTML", "CSS", "Javascript", "PHP"],
-      longDescription: "During my third year of college, I took on a paid freelance project for a startup that provides online chess training to students across 10+ countries with over 500 active learners. Along with a teammate, I designed and developed their website from scratch, conducting weekly requirement meetings to ensure the product aligned with the client’s vision. The project was successfully delivered and deployed, earning positive feedback and full payment upon completion for our professionalism and quality of work.",
+      techStack: ["React", "React-Native", "Typescript", "Node.js"],
+      longDescription: `A modern property rental and fintech platform that simplifies the entire rental experience — from discovering properties to managing rent payments. It enables users to search and rent properties, pay rent securely through the app, and manage digital wallets for instant transactions. Users can transfer money to other users, track their payment history, and earn reward points on every transaction, which can be redeemed for exclusive vouchers and offers.
+
+The platform seamlessly integrates financial services and property management, offering a unified and user-friendly experience for both tenants and landlords.`,
       features: [
-        "Designed the complete website layout in Figma from scratch, ensuring a modern and user-friendly interface that was later approved by the client.",
-        "Conducted weekly requirement discussions and demo sessions to stay aligned with the client’s goals and incorporate feedback effectively.",
-        "Implemented a mailing feature that allows users to easily book free demo classes through the website.",
-        "Developed a fully responsive website with smooth animations for an engaging user experience across all devices.",
-        "Deployed the website on the client’s domain, ensuring a seamless launch and stable performance post-deployment.",
+        "Integrated Plaid API for bank verification and ACH transfers, automating tenant payment authorization and reducing manual verification time by 80%.",
+        "Developed the Wallet-to-Wallet transaction module, enabling seamless transfers between 10,000+ Rentd user accounts with real-time balance updates and validation.",
+        "Implemented a mailing feature that allows users to easily book free demo classes through the website.Built and optimized finance APIs for handling rent payments, refunds, and transaction history, ensuring secure and ACID-compliant operations.",
+        "Implemented verification flows for password and passcode recovery with 15-minute expiry tokens, enhancing account security and preventing misuse.",
+        "Developed and configured webhooks to handle real-time transaction updates from payment gateways and bank partners.",
+        "Improved backend response times by ~40% through query optimization and asynchronous request handling."
       ],
-      role: "Web Developer",
+      role: "Backend Developer",
       duration: "4 months",
-      teamSize: "2 developers",
-      githubUrl: "https://github.com/joelcr10/learn-chess.online",
-      liveUrl: "https://learnchess.online/"
+      teamSize: "15 developers",
+      githubUrl: "",
+      liveUrl: ""
     },
     {
       title: "All-in-One Childcare Management",
-      description: "A Website developed for an Indian startup that teaches chess to 500+ children across 10+ countries.",
+      description: "A simplified childcare management platform that combines communication, learning tools, and administration into one platform.",
       image: childcareImg,
       background: 'bg-gradient-to-r from-purple-400 via-white-400 to-blue-400',
-      techStack: ["HTML", "CSS", "Javascript", "PHP"],
-      longDescription: "During my third year of college, I took on a paid freelance project for a startup that provides online chess training to students across 10+ countries with over 500 active learners. Along with a teammate, I designed and developed their website from scratch, conducting weekly requirement meetings to ensure the product aligned with the client’s vision. The project was successfully delivered and deployed, earning positive feedback and full payment upon completion for our professionalism and quality of work.",
+      techStack: ["Node.js", "Angular", "Javascript", "Kotlin", "Swift"],
+      longDescription: "A simplified childcare management platform that combines communication, learning tools, and administration into one platform. It saves time, reduces costs, and enhances parent-teacher collaboration, making it the ideal solution for daycare and preschool centers. The platform helps administrators and educators focus on what matters most child development and education. With its mobile-first approach, Bounce makes it easier for teachers, parents, and center management to collaborate, improving efficiency and enhancing the learning experience for children globally.",
       features: [
-        "Designed the complete website layout in Figma from scratch, ensuring a modern and user-friendly interface that was later approved by the client.",
-        "Conducted weekly requirement discussions and demo sessions to stay aligned with the client’s goals and incorporate feedback effectively.",
-        "Implemented a mailing feature that allows users to easily book free demo classes through the website.",
-        "Developed a fully responsive website with smooth animations for an engaging user experience across all devices.",
-        "Deployed the website on the client’s domain, ensuring a seamless launch and stable performance post-deployment.",
+        "Developed Program and Subscription modules, allowing admins to create programs, manage subscriptions, and automate invoice generation for enrolled students.",
+        "Implemented a CRON-based invoice scheduler that generates and dispatches monthly invoices for 500+ students, reducing manual workload by 90%.",
+        "Built a system to generate employee attendance sessions from check-in/check-out logs for accurate reporting.",
+        "Optimized attendance reporting APIs using Sequelize and dynamic SQL, achieving 3× faster response times with advanced filtering, sorting, and pagination support.",
+        "Implemented bulk student tag upload and developed reporting/export APIs for CSV and PDF formats.",
+        "Enhanced multiple legacy APIs with better filtering, sorting, and performance optimizations.",
+        "Implemented white-labeling, allowing centers to use their own branding, domain, and sender identity, improving customer trust and engagement."
       ],
-      role: "Web Developer",
-      duration: "4 months",
-      teamSize: "2 developers",
-      githubUrl: "https://github.com/joelcr10/learn-chess.online",
-      liveUrl: "https://learnchess.online/"
+      role: "Backend Developer",
+      duration: "11 months",
+      teamSize: "12 developers",
+      githubUrl: "",
+      liveUrl: ""
     },
     {
       title: "E-Learning Tracking Tool",
@@ -190,7 +195,7 @@ export default function Projects() {
             </Card>
           ))}
         </div>
-         <Button variant="default" size="lg" className="mt-10" onClick={() => setShowAll(!showAll)}>{showAll ? 'Show Less': 'View All Projects'}</Button>
+         <Button variant={showAll? "outline" : "default"} size="lg" className="mt-10" onClick={() => setShowAll(!showAll)}>{showAll ? 'Show Less': 'View All Projects'}</Button>
       </div>
 
       <ProjectModal

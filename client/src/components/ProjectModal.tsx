@@ -98,7 +98,7 @@ export default function ProjectModal({ project, open, onOpenChange }: ProjectMod
 
           {/* Key Features */}
           <div>
-            <h3 className="text-xl font-semibold mb-3">Key Features</h3>
+            <h3 className="text-xl font-semibold mb-3">My Contributions</h3>
             <ul className="space-y-2">
               {project.features.map((feature, index) => (
                 <li key={index} className="flex gap-2 text-base text-muted-foreground">

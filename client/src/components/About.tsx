@@ -27,13 +27,13 @@ export default function About() {
 
           <div>
             <p className="text-lg leading-relaxed text-foreground mb-6">
-              I'm a passionate full-stack developer with over 5 years of experience
-              building web applications. I specialize in creating scalable,
-              user-friendly solutions using modern technologies.
+              I’m a Full-Stack Developer with 2+ years of experience building scalable web applications using React.js, Node.js, and AWS. I focus on creating efficient, reliable systems that deliver great user experiences and solve real business challenges.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-              Beyond development, I take pride in mentoring junior developers and leading teams to deliver impactful internal tools still used across organizations. My approach blends strong technical expertise with practical problem-solving, ensuring that every project I contribute to is efficient, maintainable, and built to scale. I’m always eager to explore new technologies and continue evolving as a developer who bridges functionality and innovation.
+             Always focusing on efficiency, reliability, and clean architecture. I enjoy transforming ideas into production-ready features that enhance user experience and simplify business processes.
+            
+            My approach blends strong technical expertise with practical problem-solving, ensuring that every project I contribute to is efficient, maintainable, and built to scale. I’m always eager to explore new technologies and continue evolving as a developer who bridges functionality and innovation.
             </p>
 
             <div>
