@@ -3,6 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowDown, Download, Code2, Sparkles, Rocket, Zap, MapPin } from "lucide-react";
 import profileImage from "@assets/generated_images/profile.jpg";
 import { useEffect, useState } from "react";
+import {Link} from "react-router-dom";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,7 +20,7 @@ export default function Hero() {
   };
 
   const handleDownload = () => {
-    console.log("Download resume triggered");
+    window.open('https://drive.google.com/file/d/1K4q2mtCPk0JF3OvNsm0reHMupHD5kHEb/view?usp=sharing', '_blank');
   };
 
   return (
@@ -151,6 +152,13 @@ export default function Hero() {
           >
             <Download className="h-4 w-4" /> Download Resume
           </Button>
+          {/* <a
+            href="../../../attached_assets/generated_images/JOEL-C-RAJU.pdf"
+            target="_blank"
+            download
+          >
+             Download Resume
+          </a> */}
         </div>
 
         {/* Stats or highlights with animation */}
