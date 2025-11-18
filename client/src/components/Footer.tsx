@@ -6,8 +6,9 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSocialClick = (platform: string) => {
-    console.log(`${platform} clicked`);
+  const handleSocialClick = (url: string) => {
+    // console.log(`${platform} clicked`);
+    window.open(url, "_blank")
   };
 
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <div>
             <p className="text-sm text-muted-foreground">
-              © 2025 John Doe. All rights reserved.
+              © 2025 Joel C Raju. All rights reserved.
             </p>
           </div>
 
@@ -24,7 +25,7 @@ export default function Footer() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => handleSocialClick("GitHub")}
+              onClick={() => handleSocialClick("https://github.com/joelcr10")}
               data-testid="link-github"
               aria-label="GitHub"
             >
@@ -33,7 +34,7 @@ export default function Footer() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => handleSocialClick("LinkedIn")}
+              onClick={() => handleSocialClick("https://www.linkedin.com/in/jcr2000/")}
               data-testid="link-linkedin"
               aria-label="LinkedIn"
             >
@@ -42,7 +43,7 @@ export default function Footer() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => handleSocialClick("Email")}
+              onClick={() => handleSocialClick("gmail:joelcraju@gmail.com")}
               data-testid="link-email"
               aria-label="Email"
             >

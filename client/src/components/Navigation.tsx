@@ -31,7 +31,7 @@ export default function Navigation() {
           className="text-lg font-semibold hover-elevate active-elevate-2 px-2 py-1 rounded-md transition-colors"
           data-testid="link-home"
         >
-          Portfolio
+          JCR
         </button>
 
         <div className="flex items-center gap-6">

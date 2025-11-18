@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { ArrowDown, Download, Code2, Sparkles, Rocket, Zap } from "lucide-react";
+import { ArrowDown, Download, Code2, Sparkles, Rocket, Zap, MapPin } from "lucide-react";
 import profileImage from "@assets/generated_images/profile.jpg";
 import { useEffect, useState } from "react";
 
@@ -89,7 +89,7 @@ export default function Hero() {
             className="absolute -top-2 -right-2 bg-primary text-primary-foreground rounded-full p-2"
             style={{ animation: 'bounce 2s ease-in-out infinite' }}
           >
-            <Sparkles className="h-5 w-5" />
+            <MapPin className="h-5 w-5" />
           </div>
         </div>
 

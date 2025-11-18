@@ -9,6 +9,9 @@ import imdbImg from "@assets/generated_images/imdb.png";
 import learnchessImg from "@assets/generated_images/lco.png";
 import propTechImg from "@assets/generated_images/propTech.png";
 import childcareImg from "@assets/generated_images/childcare.png";
+import inshortsImg from "@assets/generated_images/inshorts.png";
+import fruitsImg from "@assets/generated_images/fruits.png"
+import swiftAidImg from "@assets/generated_images/swiftaid.png";
 
 type ProjectDetails = {
   title: string;
@@ -81,46 +84,45 @@ The platform seamlessly integrates financial services and property management, o
       description: "A React-Native mobile application that is used by L&D team to track the performance and progress of trainees in the E-Learning phase.",
       image: ilpexImg,
       background: 'bg-gradient-to-r from-purple-400 via-white-400 to-blue-500',
-      techStack: ["React-Native", "Node.js", "MySQL", "AWS"],
-      longDescription: `During my trainee phase at Experion, I led a team and developed a tracking tool for the Learning & Development (L&D) team to monitor progress of newly onboarded trainees. The tool tracks and analyzes individual performance via the Percipio platform and allows trainees to follow their daily learning materials.
-
-                       
+      techStack: ["React-Native", "Node.js", "Typescript", "MySQL", "AWS"],
+      longDescription: `During my trainee phase at Experion, I led a team and developed a tracking tool for the Learning & Development (L&D) team to monitor progress of newly onboarded trainees. The tool tracks and analyzes individual performance via the Percipio platform and allows trainees to follow their daily learning materials.           
       It also enables L&D to manage multiple trainee batches, each with customized learning playlists. Initially developed as a POC, the tool is still actively used, saving countless hours of manual tracking previously done in Excel.`,
       features: [
-        "Integrated Percipio, a third-party learning platform, to consolidate and visualize trainee progress in one unified dashboard.",
+        "Integrated with the Percipio learning platform (third-party) via API to track trainee learning activities and course completions automatically.",
         "Implemented automated notification and reminder systems to boost trainee engagement, assessment completion, and overall learning outcomes.",
-        "Advanced product search and filtering",
-        "Customer review and rating system",
-        "Comprehensive admin dashboard with analytics",
-        "Mobile-responsive design for all devices",
-        "Email notifications for orders and shipping updates"
+        "Set up a monolithic Node.js architecture and standardized the folder structure to maintain code uniformity and streamline team collaboration.",
+        "Deployed the application on AWS using SSH-based deployment and configured environment variables for secure access and scalability.",
+        "Configured CRON jobs to sync trainee progress and update reports regularly from Percipio.",
+        "Developed an in-app assessment module allowing trainees to attempt quizzes, receive grades, and track their performance within the platform.",
+        "Built an interactive admin dashboard to visualize trainee performance, both individually and batch-wise, using progress metrics and assessment results.",
+        "Implemented dynamic course list management, enabling admins to assign customized course lists per batch for tailored learning paths."
       ],
       role: "Team Lead / Full Stack Developer",
       duration: "3 months",
       teamSize: "7 developers",
-      githubUrl: "#",
+      githubUrl: "https://github.com/joelcr10/ILPex",
       liveUrl: "#"
     },
     {
-      title: "Task Management System",
-      description: "Collaborative project management tool with real-time updates, kanban boards, and team collaboration features.",
+      title: "Movie Index Website",
+      description: "A comprehensive film and TV discovery platform built on the TMDB API, featuring title details, cast information, reviews, and trending content.",
       image: imdbImg,
       background: 'bg-gradient-to-r from-orange-400 via-white-400 to-red-500',
-      techStack: ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
-      longDescription: "Built a powerful project management platform that enables teams to collaborate seamlessly. The system features real-time synchronization, drag-and-drop kanban boards, and comprehensive task tracking. It supports multiple projects, custom workflows, and integrates with popular development tools.",
+      techStack: ["Javascript", "HTML", "CSS", "TypeScript", "Firebase"],
+      longDescription: "Developed an IMDb clone website as part of a team project during the trainee phase, where I led a team of five members. Our goal was to recreate the IMDb experience both visually and functionally, and we successfully replicated nearly 90% of its core features and interface. The platform was built using the TMDB API to deliver real-time data on movies, TV shows, cast information, ratings, and trending content. The final product was a fully responsive and feature-rich movie database platform that closely resembled IMDb’s user experience. This project strengthened my leadership skills, enhanced my full-stack development abilities, and provided hands-on experience building a large-scale, real-world application using modern technologies.",
       features: [
-        "Real-time collaboration with WebSocket technology",
-        "Drag-and-drop kanban board interface",
-        "Custom workflow creation and management",
-        "Time tracking and productivity analytics",
-        "File attachments and comment threads",
-        "Team member permissions and roles",
-        "Integration with GitHub and Slack"
+        "Developed the Home Page, Movie Detail Page, and TV Series Page, creating an almost exact visual and functional replica of IMDb’s original design.",
+        "Integrated the TMDB API to fetch accurate, real-time movie and TV series data, including ratings, cast, trailers, and trending content.",
+        "Built an interactive and responsive carousel on the Home Page to highlight trending and featured titles.",
+        "Developed a feature for sending and receiving friend requests, enabling users to connect with other MovieIndex users and view each other's watchlists.",
+        "Designed and built a dedicated Profile Page, allowing users to view their personalized watchlist and profile details.",
+        "Added core features such as watchlist management, user ratings, global search, and improved content navigation.",
+        "Implemented a section to display currently running movies along with their box office collections."
       ],
-      role: "Full Stack Developer",
-      duration: "4 months",
-      teamSize: "3 developers",
-      githubUrl: "#",
+      role: "Team Lead / Full Stack Developer",
+      duration: "1 months",
+      teamSize: "5 developers",
+      githubUrl: "https://github.com/joelcr10/imdb",
       liveUrl: "#"
     },
     {
@@ -142,10 +144,70 @@ The platform seamlessly integrates financial services and property management, o
       teamSize: "2 developers",
       githubUrl: "https://github.com/joelcr10/learn-chess.online",
       liveUrl: "https://learnchess.online/"
+    },
+    {
+      title: "News Aggregator App",
+      description: "A mobile application that aggregates news articles from various sources and presents them in a user-friendly interface.",
+      image: inshortsImg,
+      background: 'bg-gradient-to-r from-red-600 via-white-400 to-orange-700',
+      techStack: ["React Native", "TypeScript", "MongoDB", "PostgreSQL", "Node.js"],
+      longDescription: "An intelligent news aggregator app that collects news articles from multiple sources and summarizes them into concise, easy-to-read updates so users can stay informed quickly. Each summary includes a headline, image, short description, and a link to the full article for detailed reading.",
+      features: [
+        "Implemented content summarization logic to generate short, digestible versions of long news articles.",
+        "Developed user authentication system with Google SSO integration and JWT-based login, ensuring secure access.",
+        "Built a bookmark feature that allows users to save important news for later reading.",
+        "Integrated lazy loading to improve performance and reduce initial page load time.",
+        "Designed responsive UI components for a smooth, mobile-friendly user experience.",
+      ],
+      role: "Full Stack Developer",
+      duration: "1 months",
+      teamSize: "1 developer",
+      githubUrl: "#",
+      liveUrl: "#"
+    },
+    {
+      title: "E-Rot Detector WebApp",
+      description: "A web application that uses image processing, machine learning, and gas sensor data to detect and analyze fruit ripeness.",
+      image: fruitsImg,
+      background: 'bg-gradient-to-r from-green-500 via-white-400 to-blue-400',
+      techStack: ["Flutter", "React", "Firebase", "Python", "Raspberry PI", "Machine Learning", "Image Processing"],
+      longDescription: "A web and IoT-based application developed as part of the final year B.Tech project, designed to detect and analyze the degree of fruit rottenness using image processing, machine learning, and gas sensor data. The system helps supermarkets and warehouses identify decaying fruits early, preventing spoilage of surrounding produce caused by gases like ethylene released during the rotting process.",
+      features: [
+        "Learned and implemented IoT by integrating Raspberry Pi with gas sensors (MQ series) to detect emitted gases from fruits.",
+        "Established communication between Raspberry Pi and sensors using an ADC module to convert analog signals into digital data.",
+        "Developed Python scripts to retrieve, clean, and store sensor readings in the database for classification.",
+        "Trained a machine learning model to classify fruit freshness levels using combined image and gas data.",
+        "Built a Flutter mobile application to display real-time gas levels and freshness indicators for each fruit basket.",
+      ],
+      role: "Full Stack Developer",
+      duration: "3 months",
+      teamSize: "2 developers",
+      githubUrl: "#",
+      liveUrl: "#"
+    },
+    {
+      title: "SwiftAid : 'Quick Emergency Response'",
+      description: "A web application that uses image processing, machine learning, and gas sensor data to detect and analyze fruit ripeness.",
+      image: swiftAidImg,
+      background: 'bg-gradient-to-r from-pink-300 via-white-400 to-red-400',
+      techStack: ["Flutter", "React", "Firebase", "Python", "Raspberry PI", "Machine Learning", "Image Processing"],
+      longDescription: "A web and IoT-based application developed as part of the final year B.Tech project, designed to detect and analyze the degree of fruit rottenness using image processing, machine learning, and gas sensor data. The system helps supermarkets and warehouses identify decaying fruits early, preventing spoilage of surrounding produce caused by gases like ethylene released during the rotting process.",
+      features: [
+        "Learned and implemented IoT by integrating Raspberry Pi with gas sensors (MQ series) to detect emitted gases from fruits.",
+        "Established communication between Raspberry Pi and sensors using an ADC module to convert analog signals into digital data.",
+        "Developed Python scripts to retrieve, clean, and store sensor readings in the database for classification.",
+        "Trained a machine learning model to classify fruit freshness levels using combined image and gas data.",
+        "Built a Flutter mobile application to display real-time gas levels and freshness indicators for each fruit basket.",
+      ],
+      role: "Full Stack Developer",
+      duration: "3 months",
+      teamSize: "2 developers",
+      githubUrl: "#",
+      liveUrl: "#"
     }
   ];
 
-  const visibleProjects = showAll ? projects : projects.slice(0,5);
+  const visibleProjects = showAll ? projects : projects.slice(0,4);
 
   const handleProjectClick = (project: ProjectDetails) => {
     setSelectedProject(project);

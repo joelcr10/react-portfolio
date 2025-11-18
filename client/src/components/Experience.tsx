@@ -11,40 +11,31 @@ type Job = {
 export default function Experience() {
   const jobs: Job[] = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovations Inc.",
-      period: "2022 - Present",
+      title: "Software Engineer",
+      company: "Experion Technologies",
+      period: "May 2024 - Present",
       responsibilities: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Mentored team of 5 junior developers on best practices",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Architected cloud infrastructure on AWS with high availability"
+        "Building and maintaining end-to-end web applications using modern technologies including React, React-Native, Node.js, TypeScript, SQL, and AWS.",
+        "Developed scalable front-end interfaces using React and TypeScript, delivering responsive UI components, optimized workflows, and seamless API integrations.",
+        "Designed and optimized database queries using SQL and Sequelize, enabling efficient filtering, sorting, joins, and pagination for high-performance data retrieval.",
+        "Integrated AWS services such as SNS, SES, S3 (signed URLs), and Lambda to enable automated notifications, secure file storage, and event-driven processing.",
+        "Implemented external platform integrations, including identity verification, payment solutions, and loyalty/rewards systems to expand product functionality.",
+        "Refactored and improved legacy APIs, enhancing system performance, reducing latency, and increasing overall reliability in production environments.",
+        "Collaborated with cross-functional teams and took ownership of feature delivery, ensuring high-quality code, smooth releases, and continuous product improvements."
       ],
-      technologies: ["React", "Node.js", "AWS", "Docker", "PostgreSQL"]
+      technologies: []
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      period: "2020 - 2022",
+      title: "Trainee",
+      company: "Experion Technologies",
+      period: "Nov 2023 - April 2024",
       responsibilities: [
-        "Developed customer-facing web applications using React and TypeScript",
-        "Built RESTful APIs with Node.js and Express",
-        "Optimized database queries improving performance by 40%",
-        "Collaborated with designers to implement responsive UI/UX"
+        "Recognized as one of the top-performing trainees, achieving the highest overall rating across both technical and non-technical evaluations.",
+        "Appointed as Team Lead for a group of 5 trainees, responsible for guiding, mentoring, and managing the development of the initial project.",
+        "Developed an internal tool for the Learning & Development (L&D) team, which automated key workflows, reduced manual effort by nearly 80%, and continues to be used actively within the organization.",
+        "Participated in multiple soft-skills, communication, and corporate management training sessions, enhancing collaboration, leadership, and workplace professionalism."
       ],
-      technologies: ["React", "TypeScript", "Node.js", "MongoDB", "Redis"]
-    },
-    {
-      title: "Junior Software Developer",
-      company: "StartUp Ventures",
-      period: "2019 - 2020",
-      responsibilities: [
-        "Contributed to development of company's core product features",
-        "Fixed bugs and implemented unit tests for existing codebase",
-        "Participated in code reviews and agile development processes",
-        "Assisted in migration from monolith to microservices"
-      ],
-      technologies: ["JavaScript", "Python", "MySQL", "Git"]
+      technologies: []
     }
   ];
 
